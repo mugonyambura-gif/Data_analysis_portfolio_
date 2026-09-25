@@ -12,22 +12,29 @@ content="Mugo Joseph Muiruri — Junior Data Analyst portfolio featuring Python,
 <title>Mugo Joseph Muiruri | Data Analyst Portfolio</title>
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 :root{
   --ink:#0f172a;
   --muted:#64748b;
   --blue:#2563eb;
+  --blue-dark:#1d4ed8;
   --bg:#f8fafc;
   --line:#e2e8f0;
   --dark:#0b1220;
-  --card:#fff
+  --dark-card:#151f33;
+  --white:#ffffff;
 }
 
 *{
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
@@ -35,55 +42,81 @@ body{
   font-family:Inter,Segoe UI,Arial,sans-serif;
   background:var(--bg);
   color:var(--ink);
-  line-height:1.6
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
-  color:inherit
+  color:inherit;
 }
 
-/* NAVIGATION */
+img{
+  max-width:100%;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .nav{
   height:72px;
   background:#fff;
   border-bottom:1px solid var(--line);
+
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   padding:0 7%;
+
   position:sticky;
   top:0;
-  z-index:10
+  z-index:100;
 }
 
 .logo{
   font-weight:900;
-  letter-spacing:.2px
+  font-size:20px;
 }
 
 .logo span{
-  color:var(--blue)
+  color:var(--blue);
 }
 
 .navlinks{
   display:flex;
   gap:28px;
+
   font-size:13px;
   font-weight:700;
-  color:#475569
+  color:#475569;
 }
 
-/* HERO */
+.navlinks a{
+  transition:.2s;
+}
+
+.navlinks a:hover{
+  color:var(--blue);
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   padding:88px 7% 72px;
+
   background:#fff;
+
   display:grid;
   grid-template-columns:1.25fr .75fr;
+
   gap:65px;
-  align-items:center
+
+  align-items:center;
 }
 
 .eyebrow{
@@ -91,352 +124,625 @@ a{
   font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:var(--blue)
+  color:var(--blue);
 }
 
 h1{
   font-size:clamp(42px,6vw,72px);
   line-height:1.02;
+
   margin:14px 0 22px;
-  max-width:800px
+
+  max-width:800px;
 }
 
 h1 span{
-  color:var(--blue)
+  color:var(--blue);
 }
 
 .hero p{
   font-size:18px;
   line-height:1.7;
+
   color:#475569;
-  max-width:700px
+
+  max-width:700px;
 }
 
 .buttons{
   display:flex;
   gap:10px;
+
   flex-wrap:wrap;
-  margin-top:28px
+
+  margin-top:28px;
 }
 
 .btn{
   display:inline-block;
+
   padding:12px 18px;
+
   border-radius:9px;
+
   font-size:13px;
   font-weight:800;
-  border:1px solid var(--line)
+
+  border:1px solid var(--line);
+
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .primary{
   background:var(--blue);
   color:#fff;
-  border-color:var(--blue)
+
+  border-color:var(--blue);
+}
+
+.primary:hover{
+  background:var(--blue-dark);
 }
 
 .dark{
   background:var(--dark);
   color:#fff;
-  border-color:var(--dark)
+
+  border-color:var(--dark);
 }
 
-/* HERO CARD */
+
+/* =========================
+   HERO CARD
+========================= */
 
 .hero-card{
   background:var(--dark);
+
   color:#fff;
+
   border-radius:22px;
+
   padding:30px;
-  box-shadow:0 22px 50px rgba(15,23,42,.15)
+
+  box-shadow:
+    0 22px 50px rgba(15,23,42,.15);
 }
 
 .big{
   font-size:60px;
   font-weight:900;
-  line-height:1
+  line-height:1;
 }
 
 .hero-card p{
   font-size:14px;
+
   color:#cbd5e1;
-  margin:10px 0 28px
+
+  margin:10px 0 28px;
 }
 
 .mini{
   display:grid;
+
   grid-template-columns:1fr 1fr;
-  gap:12px
+
+  gap:12px;
 }
 
 .mini div{
-  background:#151f33;
+  background:var(--dark-card);
+
   padding:15px;
-  border-radius:12px
+
+  border-radius:12px;
 }
 
 .mini b{
-  display:block
+  display:block;
 }
 
 .mini small{
-  color:#94a3b8
+  color:#94a3b8;
 }
 
-/* SECTIONS */
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section{
-  padding:72px 7%
+  padding:80px 7%;
 }
 
 .section h2{
-  font-size:32px;
-  margin:0 0 7px
+  font-size:34px;
+
+  margin:0 0 8px;
 }
 
 .intro{
   color:var(--muted);
+
   max-width:760px;
-  margin:0
+
+  margin:0;
 }
 
-/* PROJECTS */
+
+/* =========================
+   PROJECT GRID
+========================= */
 
 .projects{
   display:grid;
+
   grid-template-columns:1fr 1fr;
-  gap:22px;
-  margin-top:28px
+
+  gap:28px;
+
+  margin-top:35px;
+
+  align-items:start;
 }
 
 .project{
   background:#fff;
+
   border:1px solid var(--line);
-  border-radius:18px;
+
+  border-radius:20px;
+
   padding:28px;
-  box-shadow:0 8px 25px rgba(15,23,42,.04)
+
+  box-shadow:
+    0 8px 30px rgba(15,23,42,.05);
+
+  overflow:hidden;
 }
 
 .project .num{
   font-size:11px;
+
   color:var(--blue);
+
   font-weight:900;
-  letter-spacing:1.4px
+
+  letter-spacing:1.4px;
 }
 
 .project h3{
-  font-size:22px;
-  margin:7px 0
+  font-size:24px;
+
+  margin:7px 0 10px;
 }
 
 .project p{
   font-size:14px;
-  color:var(--muted)
+
+  color:var(--muted);
 }
 
-/* TAGS */
+
+/* =========================
+   TAGS
+========================= */
 
 .tags{
   display:flex;
+
   gap:7px;
+
   flex-wrap:wrap;
-  margin:18px 0
+
+  margin:20px 0;
 }
 
 .tags span{
   font-size:11px;
+
   background:#eff6ff;
+
   color:#1d4ed8;
-  padding:6px 9px;
+
+  padding:6px 10px;
+
   border-radius:20px;
-  font-weight:800
+
+  font-weight:800;
 }
 
-/* METRICS */
+
+/* =========================
+   METRICS
+========================= */
 
 .metrics{
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:22px
+
+  gap:10px;
+
+  margin:22px 0;
 }
 
 .metric{
   background:#f1f5f9;
+
   border:1px solid #e8edf3;
+
   border-radius:12px;
-  padding:16px
+
+  padding:14px;
 }
 
 .metric b{
-  font-size:21px;
+  font-size:19px;
+
   display:block;
-  color:var(--blue)
+
+  color:var(--blue);
 }
 
 .metric small{
-  color:var(--muted)
+  color:var(--muted);
+
+  font-size:11px;
 }
 
-/* IMAGE GALLERY */
+
+/* =========================
+   DASHBOARD PREVIEW
+========================= */
 
 .gallery{
-  margin-top:28px
+  margin-top:30px;
 }
 
-.gallery h4{
-  margin:0 0 12px;
-  font-size:15px
+.gallery-title{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  margin-bottom:12px;
 }
 
-.main-shot{
-  width:100%;
-  display:block;
-  border:1px solid var(--line);
-  border-radius:14px;
-  box-shadow:0 8px 25px rgba(15,23,42,.08)
+.gallery-title h4{
+  margin:0;
+
+  font-size:15px;
 }
 
-.thumb-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:12px
-}
-
-.thumb{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  object-position:top;
-  border:1px solid var(--line);
-  border-radius:12px;
-  cursor:pointer;
-  transition:transform .2s,box-shadow .2s
-}
-
-.thumb:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(15,23,42,.12)
-}
-
-.caption{
+.gallery-title span{
   font-size:11px;
+
   color:var(--muted);
-  margin-top:7px
 }
 
-/* SKILLS */
+
+/* Main dashboard */
+
+.dashboard-frame{
+  background:#f1f5f9;
+
+  border:1px solid var(--line);
+
+  border-radius:15px;
+
+  padding:10px;
+
+  overflow:hidden;
+}
+
+.dashboard-image{
+  width:100%;
+
+  height:auto;
+
+  display:block;
+
+  border-radius:9px;
+
+  cursor:pointer;
+
+  transition:
+    transform .25s,
+    filter .25s;
+}
+
+.dashboard-image:hover{
+  transform:scale(1.01);
+
+  filter:brightness(.96);
+}
+
+
+/* =========================
+   DATA CLEANING COMPARISON
+========================= */
+
+.cleaning-title{
+  margin-top:24px;
+
+  margin-bottom:12px;
+
+  font-size:14px;
+
+  font-weight:800;
+}
+
+.before-after{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+}
+
+.data-shot{
+  background:#f1f5f9;
+
+  border:1px solid var(--line);
+
+  border-radius:12px;
+
+  padding:7px;
+}
+
+.data-shot img{
+  width:100%;
+
+  display:block;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.data-shot img:hover{
+  transform:scale(1.015);
+}
+
+.data-label{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:8px 3px 2px;
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+.before-label{
+  color:#b45309;
+}
+
+.after-label{
+  color:#15803d;
+}
+
+
+/* =========================
+   PROJECT BUTTONS
+========================= */
+
+.project-buttons{
+  display:flex;
+
+  gap:9px;
+
+  flex-wrap:wrap;
+
+  margin-top:24px;
+}
+
+.project-buttons .btn{
+  padding:10px 14px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
 
 .skills{
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:14px;
-  margin-top:25px
+
+  margin-top:28px;
 }
 
 .skill{
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:14px;
-  padding:20px
+
+  padding:20px;
 }
 
 .skill b{
   display:block;
-  margin-bottom:5px
+
+  margin-bottom:5px;
 }
 
 .skill span{
   font-size:13px;
-  color:var(--muted)
+
+  color:var(--muted);
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACT
+========================= */
 
 .cta{
   background:var(--dark);
-  color:#fff
+
+  color:#fff;
 }
 
 .cta p{
-  color:#aeb9c8
+  color:#aeb9c8;
 }
 
 .contact{
   display:flex;
+
   gap:10px;
+
   flex-wrap:wrap;
-  margin-top:20px
+
+  margin-top:20px;
 }
 
 .contact a{
   padding:10px 14px;
+
   border:1px solid #334155;
+
   border-radius:8px;
+
   color:#e2e8f0;
-  font-size:13px
+
+  font-size:13px;
+
+  transition:.2s;
 }
 
-/* FOOTER */
+.contact a:hover{
+  border-color:#64748b;
+
+  background:#151f33;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   padding:25px 7%;
+
   background:#070d17;
+
   color:#94a3b8;
+
   font-size:12px;
-  text-align:center
+
+  text-align:center;
 }
 
-/* RESPONSIVE */
 
-@media(max-width:800px){
+/* =========================
+   RESPONSIVE
+========================= */
 
-  .hero,
+@media(max-width:1000px){
+
   .projects{
-    grid-template-columns:1fr
-  }
-
-  .skills{
-    grid-template-columns:1fr 1fr
-  }
-
-  .metrics{
-    grid-template-columns:1fr 1fr
-  }
-
-  .navlinks{
-    display:none
-  }
-}
-
-@media(max-width:500px){
-
-  .skills{
-    grid-template-columns:1fr
-  }
-
-  .metrics{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr;
   }
 
   .hero{
-    padding-top:60px
+    grid-template-columns:1fr;
   }
 
-  .thumb-grid{
-    grid-template-columns:1fr
-  }
-
-  .thumb{
-    height:auto
-  }
 }
+
+@media(max-width:800px){
+
+  .skills{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .metrics{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .section{
+    padding:60px 5%;
+  }
+
+  .hero{
+    padding:65px 5% 55px;
+  }
+
+  .before-after{
+    grid-template-columns:1fr;
+  }
+
+  .skills{
+    grid-template-columns:1fr;
+  }
+
+  .metrics{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .project{
+    padding:20px;
+  }
+
+}
+
+@media(max-width:420px){
+
+  .metrics{
+    grid-template-columns:1fr;
+  }
+
+  .buttons,
+  .project-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    text-align:center;
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
 
 <nav class="nav">
 
@@ -445,16 +751,24 @@ footer{
   </a>
 
   <div class="navlinks">
+
     <a href="#about">About</a>
+
     <a href="#projects">Projects</a>
+
     <a href="#skills">Skills</a>
+
     <a href="#contact">Contact</a>
+
   </div>
 
 </nav>
 
 
-<!-- HERO -->
+
+<!-- =========================================
+     HERO
+========================================= -->
 
 <header class="hero" id="home">
 
@@ -495,7 +809,9 @@ footer{
 
   <div class="hero-card">
 
-    <div class="big">2</div>
+    <div class="big">
+      2
+    </div>
 
     <p>
       End-to-end analytics case studies
@@ -530,11 +846,16 @@ footer{
 </header>
 
 
-<!-- ABOUT -->
+
+<!-- =========================================
+     ABOUT
+========================================= -->
 
 <section class="section" id="about">
 
-  <h2>About</h2>
+  <h2>
+    About
+  </h2>
 
   <p class="intro">
     BBIT student at JKUAT building practical experience in analytics,
@@ -545,22 +866,31 @@ footer{
 </section>
 
 
-<!-- PROJECTS -->
+
+<!-- =========================================
+     PROJECTS
+========================================= -->
 
 <section class="section" id="projects">
 
-  <h2>Featured Projects</h2>
+  <h2>
+    Featured Projects
+  </h2>
 
   <p class="intro">
-    Two projects presented as business case studies — showing the path
-    from data preparation to decision-ready insights.
+    Two projects presented as business case studies — showing the
+    journey from raw data and cleaning to interactive dashboards
+    and business insights.
   </p>
 
 
   <div class="projects">
 
 
-    <!-- PROJECT 1 -->
+
+    <!-- =====================================
+         PROJECT 01
+    ====================================== -->
 
     <article class="project">
 
@@ -578,15 +908,19 @@ footer{
       </p>
 
 
+      <!-- TAGS -->
+
       <div class="tags">
 
         <span>Python</span>
         <span>Pandas</span>
         <span>Power BI</span>
-        <span>Streamlit</span>
+        <span>Excel</span>
 
       </div>
 
+
+      <!-- METRICS -->
 
       <div class="metrics">
 
@@ -620,48 +954,114 @@ footer{
       </p>
 
 
-      <!-- RETAIL PHOTOS -->
+
+      <!-- =================================
+           POWER BI IMAGE
+      ================================== -->
 
       <div class="gallery">
 
-        <h4>
-          Power BI Dashboard
-        </h4>
+        <div class="gallery-title">
 
-        <img
-          class="main-shot"
-          src="assets/infinite-shop-dashboard.png"
-          alt="Infinite Shop Sales Power BI dashboard"
-        >
+          <h4>
+            Infinite Shop Power BI Dashboard
+          </h4>
+
+          <span>
+            Click image to enlarge
+          </span>
+
+        </div>
 
 
-        <div class="thumb-grid">
+        <div class="dashboard-frame">
 
-          <div>
+          <a
+            href="assets/infinite-shop-dashboard.png"
+            target="_blank"
+          >
 
             <img
-              class="thumb"
-              src="assets/shop-dataset-before-cleaning.png"
-              alt="Shop sales dataset before cleaning"
+              class="dashboard-image"
+              src="assets/infinite-shop-dashboard.png"
+              alt="Infinite Shop Sales Power BI dashboard"
             >
 
-            <div class="caption">
-              Dataset before cleaning
+          </a>
+
+        </div>
+
+
+        <!-- =================================
+             DATA CLEANING
+        ================================== -->
+
+        <div class="cleaning-title">
+          Data Cleaning Process
+        </div>
+
+
+        <div class="before-after">
+
+
+          <!-- BEFORE -->
+
+          <div class="data-shot">
+
+            <a
+              href="assets/shop-dataset-before-cleaning.png"
+              target="_blank"
+            >
+
+              <img
+                src="assets/shop-dataset-before-cleaning.png"
+                alt="Infinite Shop dataset before cleaning"
+              >
+
+            </a>
+
+            <div class="data-label">
+
+              <span class="before-label">
+                BEFORE CLEANING
+              </span>
+
+              <span>
+                Excel
+              </span>
+
             </div>
 
           </div>
 
 
-          <div>
 
-            <img
-              class="thumb"
-              src="assets/shop-dataset-after-cleaning.png"
-              alt="Shop sales dataset after cleaning"
+          <!-- AFTER -->
+
+          <div class="data-shot">
+
+            <a
+              href="assets/shop-dataset-after-cleaning.png"
+              target="_blank"
             >
 
-            <div class="caption">
-              Cleaned dataset
+              <img
+                src="assets/shop-dataset-after-cleaning.png"
+                alt="Infinite Shop dataset after cleaning"
+              >
+
+            </a>
+
+            <div class="data-label">
+
+              <span class="after-label">
+                AFTER CLEANING
+              </span>
+
+              <span>
+                Excel
+              </span>
+
             </div>
 
           </div>
@@ -671,7 +1071,10 @@ footer{
       </div>
 
 
-      <div class="buttons">
+
+      <!-- PROJECT LINKS -->
+
+      <div class="project-buttons">
 
         <a
           class="btn primary"
@@ -688,10 +1091,10 @@ footer{
         </a>
 
         <a
-          class="btn"
+          class="btn dark"
           href="dashboards/Infinite_Sales_dashboard.pbix"
         >
-          Power BI
+          Power BI File
         </a>
 
       </div>
@@ -700,7 +1103,9 @@ footer{
 
 
 
-    <!-- PROJECT 2 -->
+    <!-- =====================================
+         PROJECT 02
+    ====================================== -->
 
     <article class="project">
 
@@ -718,6 +1123,8 @@ footer{
       </p>
 
 
+      <!-- TAGS -->
+
       <div class="tags">
 
         <span>Python</span>
@@ -727,6 +1134,8 @@ footer{
 
       </div>
 
+
+      <!-- METRICS -->
 
       <div class="metrics">
 
@@ -760,24 +1169,50 @@ footer{
       </p>
 
 
-      <!-- HOSPITAL PHOTO -->
+
+      <!-- =================================
+           HOSPITAL DASHBOARD
+      ================================== -->
 
       <div class="gallery">
 
-        <h4>
-          Power BI Dashboard
-        </h4>
+        <div class="gallery-title">
 
-        <img
-          class="main-shot"
-          src="assets/hospital-patient-dashboard.png"
-          alt="Hospital and patient analytics Power BI dashboard"
-        >
+          <h4>
+            Hospital & Patient Analytics Dashboard
+          </h4>
+
+          <span>
+            Click image to enlarge
+          </span>
+
+        </div>
+
+
+        <div class="dashboard-frame">
+
+          <a
+            href="assets/hospital-patient-dashboard.png"
+            target="_blank"
+          >
+
+            <img
+              class="dashboard-image"
+              src="assets/hospital-patient-dashboard.png"
+              alt="Hospital and Patient Analytics Power BI dashboard"
+            >
+
+          </a>
+
+        </div>
 
       </div>
 
 
-      <div class="buttons">
+
+      <!-- PROJECT LINKS -->
+
+      <div class="project-buttons">
 
         <a
           class="btn primary"
@@ -794,22 +1229,26 @@ footer{
         </a>
 
         <a
-          class="btn"
+          class="btn dark"
           href="dashboards/Health_and_patients_dashboard.pbix"
         >
-          Power BI
+          Power BI File
         </a>
 
       </div>
 
     </article>
 
+
   </div>
 
 </section>
 
 
-<!-- SKILLS -->
+
+<!-- =========================================
+     SKILLS
+========================================= -->
 
 <section class="section" id="skills">
 
@@ -825,31 +1264,54 @@ footer{
   <div class="skills">
 
     <div class="skill">
-      <b>Python & Pandas</b>
+
+      <b>
+        Python & Pandas
+      </b>
+
       <span>
         Data cleaning, transformation, EDA and visualization.
       </span>
+
     </div>
 
+
     <div class="skill">
-      <b>Power BI</b>
+
+      <b>
+        Power BI
+      </b>
+
       <span>
         Interactive dashboards, KPIs and business reporting.
       </span>
+
     </div>
 
+
     <div class="skill">
-      <b>Excel</b>
+
+      <b>
+        Excel
+      </b>
+
       <span>
-        Formulas, pivot tables, lookups and structured reporting.
+        Data cleaning, formulas, pivot tables, lookups and reporting.
       </span>
+
     </div>
 
+
     <div class="skill">
-      <b>SPSS</b>
+
+      <b>
+        SPSS
+      </b>
+
       <span>
         Statistical analysis and interpretation.
       </span>
+
     </div>
 
   </div>
@@ -857,7 +1319,10 @@ footer{
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================================
+     CONTACT
+========================================= -->
 
 <section class="section cta" id="contact">
 
@@ -877,6 +1342,7 @@ footer{
       mugonyambura096@gmail.com
     </a>
 
+
     <a
       href="https://github.com/mugonyambura-gif"
       target="_blank"
@@ -884,6 +1350,7 @@ footer{
     >
       GitHub
     </a>
+
 
     <a
       href="https://www.instagram.com/mugo__nyambura__data"
@@ -898,10 +1365,15 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
+
   © 2026 Mugo Joseph Muiruri • Data Analyst Portfolio
+
 </footer>
 
 
